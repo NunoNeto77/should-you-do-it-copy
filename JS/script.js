@@ -52,7 +52,7 @@ function overlayOff() {
                 <img src="${data.img}" alt="${data.msg}" id = "gif" class= "gif">
                 `;
       })
-      .catch((error) => console.log(error));
+      
 
     submitButton.style.width = "49%";
     submitButton.style.height = "45px";
