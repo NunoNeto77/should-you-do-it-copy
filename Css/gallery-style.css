@@ -1,5 +1,43 @@
 @import "./node_modules/normalize.css/normalize.css";
 
+
+/* RESPONSIVITY */
+@media screen and (max-width: 600px){
+    #navigation  {
+     height: 60px; 
+     align-items: center;   
+     }
+ 
+     #shouldYou {
+         font-size: 15px;
+     }
+ 
+     #home {
+         font-size: 15px;
+         
+     }
+ 
+     #gallery {
+         font-size: 15px;
+        
+     }
+ 
+    #container {
+        flex-direction: column;
+        
+        }
+
+
+    #dontDoIt {
+        margin-top: 30px;
+    }
+       
+ 
+ }
+
+ 
+ /* STYLES */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +48,8 @@ body {
     background-color: rgb(12, 41, 71);
     height: 100vh;
     font-family: Lato, sans-serif;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -57,29 +97,13 @@ body {
   }
 
 
-  h2 {
-      margin-bottom: 30px;
-      font-size: 50px;
-  }
+  
 
   p {
       font-size: 30px;
   }
 
-  #okay {
-      cursor: pointer;
-      margin-top: 60px;
-      width: 210px;
-      padding: 20px;
-      border-radius: 20px;
-      font-size: 30px;
-      background-color: rgb(20, 102, 108);
-  }
-
-  #okay:hover {
-    background-color: rgba(20, 102, 108, 0.788);
-
-  }
+   
 
 
 header {
@@ -94,7 +118,8 @@ nav {
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
-    line-height: 80px;
+    align-items: center;
+    
     
 }
 
@@ -117,13 +142,14 @@ a {
 
 
 ul {
-    /*float: right;*/
+    
     list-style: none; 
     display: flex;
     flex-direction: row;
     margin-right: 20px;
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
+     justify-content: start;
     
 }
 
@@ -133,7 +159,7 @@ ul {
 
 }
 
-#home:hover {
+.home:hover {
  
     border-bottom: 1px solid rgb(255, 0, 234);;
     border-top: 1px solid rgb(255, 0, 234);;
@@ -147,103 +173,73 @@ ul {
 }
 
 
-#gallery:hover {
+.gallery:hover {
     border-bottom: 1px solid rgb(255, 0, 234);;
     border-top: 1px solid rgb(255, 0, 234);;
 }
 
 
 main {
-    height: 97%;
+    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
+    margin-top: 100px;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 h1 {
+    text-align: center;
+}
+
+
+h1,h2 {
     color:violet;
 }
 
-form {
-    display: block;
-    text-align: center;
-    
-}
 
-.inputBar{
-    width: 570px;
-    height: 45px;
-    padding-left: 8px;
-    background-color: rgba(238, 130, 238, 0.336);
-    border-radius: 1rem; /*- rem (tamanho da fonte do elemento raiz ) ( elemento html*/
-    margin-top: 20px;
-}
-
-
-
-
-#buttonsContainer {
+.container {
     display: flex;
-
-}
-
-.submitButton {
-    width: 583px;
-    height: 45px;
-    border-radius: 1rem;
-    display:block;
-    margin-top: 10px;   
-    padding: 10px;
-    background-color: violet;
-    transition: transform 0.2s ease-in-out;   
-    cursor: pointer; 
+    justify-content: space-evenly; 
     
-}
-
- 
-#clearButton {
-    width: 49%;
-    height: 45px;
-    margin-left: 17px;
-    border-radius: 1rem;
-    display:block;
-    margin-top: 10px;   
      
-    background-color: violet;
-    transition: transform 0.2s ease-in-out;   
-    cursor: pointer; 
-    
-}
-
-#clearButton:active {
-    transition: transform 0.2s ease-in-out;
-    transform: scale(0.9);
-}
+    }
 
 
+.doIt {
 
-#submitButton:active {
-    transition: transform 0.2s ease-in-out;
-    transform: scale(0.9);
-
-}
-
-
-
-
-#message {
-    border-left: 0.3rem solid rgb(222, 237, 207);
-    border-right: 0.3rem solid rgb(222, 237, 207);
+    border-bottom: 1px solid green;
+    padding-bottom: 10px;
     text-align: center;
-    text-transform: capitalize;
+    margin: 10px;
 }
 
 
-#gif {
-    width: 569px;
-    height: 480px;
+.dontDoIt {
+   
+    border-bottom: 1px solid green;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+ul {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+     
+}
+
+
+li {
+    margin: 10px 0;
+}
+
+
+.gif {
+    margin: 10px 10px 0;
 }
 
 
@@ -259,5 +255,5 @@ footer {
     justify-content: center;
     color: violet;
     font-size: 20px;
-
+    margin-top: 20px; 
 }

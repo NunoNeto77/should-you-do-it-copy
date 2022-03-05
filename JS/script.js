@@ -5,9 +5,11 @@ const buttonsContainer = document.getElementById("buttonsContainer");
 const url = "https://shouldyoudoit.herokuapp.com/";
 const modalText = document.getElementById("modalText");
 let submitButton = document.getElementById("submitButton");
+//let submitButtonWithClear = document.querySelector(".submitButton")
 let inputList = [];
 
 heart.innerHTML = `\u{1F497}`;
+ 
 
 function overlayOn() {
   document.getElementById("overlay").style.display = "block";
@@ -47,7 +49,7 @@ function overlayOff() {
         // insert GIF in html
         gifContainer.innerHTML = `
                 <h1 id = "message">${data.msg}</h1>
-                <img src="${data.img}" alt="${data.msg}" id = "gif">
+                <img src="${data.img}" alt="${data.msg}" id = "gif" class= "gif">
                 `;
       })
       .catch((error) => console.log(error));
@@ -61,11 +63,22 @@ function overlayOff() {
     );
   });
 
+  
+
 
 function clearGIF() {
   inputList = []; 
   gifContainer.innerHTML = "";
-  submitButton.style.width ="583px";
+ 
   document.forms[0].reset();
   buttonsContainer.removeChild(buttonsContainer.lastChild);
+ 
+  if (screen.width <= 600 || window.innerWidth <= 600) {
+    submitButton.style.width ="310px"; 
+    return;
+  }
+  submitButton.style.width ="583px";
 }
+
+
+

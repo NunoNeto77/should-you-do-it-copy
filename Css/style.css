@@ -1,9 +1,6 @@
 @import "./node_modules/normalize.css/normalize.css";
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 /* RESPONSIVITY */
 @media screen and (max-width: 600px){
@@ -43,10 +40,17 @@
 
 
     #gif {
-        width: 300px!important;
-        height: 290px!important;
+        width: 300px;
+        height: 290px;
     }
 
+}
+
+/* STYLE */
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -137,7 +141,7 @@ nav {
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
-    line-height: 80px;
+    align-items: center;
     
 }
 
@@ -241,6 +245,8 @@ form {
     font-size: 16px;
 }
 
+
+
  
 #clearButton {
     width: 49%;
@@ -280,9 +286,9 @@ form {
 }
 
 
-#gif {
+.gif {
     width: 569px;
-    height: 480px;
+    height: 400px;
     margin-top: 15px;
 }
 
